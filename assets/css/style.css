@@ -689,6 +689,9 @@ h2 .thin { color: var(--dim); font-weight: 500; }
 .badge--war { color: #ff7a4d; border-color: #4a2415; background: rgba(255,92,22,.08); }
 .badge--org { color: #6fb3ff; border-color: #1c3350; background: rgba(60,140,255,.07); }
 .badge--sys { color: #c9a227; border-color: #3d3410; background: rgba(201,162,39,.07); }
+.badge--atk { color: #ff5c72; border-color: #4a1a24; background: rgba(255,60,90,.08); }
+.badge--pop { color: #58d68d; border-color: #1c3a2a; background: rgba(88,214,141,.07); }
+.badge--plan { color: #7d7d8a; border-color: #2e2e38; border-style: dashed; background: transparent; }
 
 /* ---------- orgs ---------- */
 .orgs {
