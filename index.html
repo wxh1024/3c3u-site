@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3C3U — 我的世界无规则服务器 | 非官方网站</title>
+<meta name="description" content="3C3U（3c3u.org）是中国大陆规模最大的《我的世界》无规则服务器之一。2021 年开服，现存档始于 2024-03-31，近十万玩家，主世界存档 14TB。这是由玩家社群维护的非官方网站。">
+<meta name="theme-color" content="#0a0a0c">
+<meta property="og:title" content="3C3U — 我的世界无规则服务器">
+<meta property="og:description" content="无规则、无政府、无退路。中国大陆最大的 Minecraft 无规则服务器之一。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+SC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ff5c16'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='14' font-weight='bold' fill='%230a0a0c' text-anchor='middle'%3E3C%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">3C</span>
+      <span class="brand-wrap">
+        <span>3C3U</span>
+        <span class="brand__sub">ANARCHY SERVER</span>
+      </span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="index.html" data-page="index.html">首页</a>
+      <a href="history.html" data-page="history.html">历史</a>
+      <a href="factions.html" data-page="factions.html">组织与遗迹</a>
+      <a href="join.html" data-page="join.html">加入</a>
+      <a class="nav__cta" href="https://wiki.3c3u.info/wiki/%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">前往 Wiki ↗</a>
+    </nav>
+    <button class="nav__toggle" aria-label="菜单"><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="hero__fade" aria-hidden="true"></div>
+
+  <div class="wrap hero__inner">
+    <div class="tag"><i></i> 服务器运行中 · Java Edition · 非官方网站</div>
+
+    <div>
+      <h1>3C3U<em>.</em>ORG</h1>
+      <div class="hero__title-cn">无 规 则 · 无 政 府 · 无 退 路</div>
+    </div>
+
+    <p class="hero__lead">
+      中国大陆规模最大的《我的世界》<strong>无规则玩法服务器</strong>之一。没有领地保护，没有管理员干预，
+      没有可以相信的邻居。这里的一切——建筑、组织、战争、背叛——都由玩家自己写下，也由玩家自己抹去。
+    </p>
+
+    <div class="ipbox">
+      <span class="ipbox__label">SERVER IP</span>
+      <span class="ipbox__val">3c3u.org</span>
+      <button class="ipbox__copy" type="button">复制地址</button>
+    </div>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="join.html">如何进入服务器</a>
+      <a class="btn btn--ghost" href="history.html">阅读服务器历史</a>
+    </div>
+
+    <div class="hero__stats">
+      <div class="hstat">
+        <div class="hstat__n"><span data-count="10">0</span><span>万+</span></div>
+        <div class="hstat__k">玩家总数</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat__n"><span data-count="680">0</span><span>+</span></div>
+        <div class="hstat__k">周末日均在线</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat__n"><span data-count="14">0</span><span>TB</span></div>
+        <div class="hstat__k">主世界存档</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat__n"><span data-count="123">0</span></div>
+        <div class="hstat__k">收录组织条目</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TICKER ===== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span class="ticker__item"><b>3c3u.org</b> 无政府 · 无规则</span>
+    <span class="ticker__item">首次开服 <b>2021-11-07</b></span>
+    <span class="ticker__item">现存档起始 <b>2024-03-31</b></span>
+    <span class="ticker__item">服务端 <b>Folia</b> 多核优化</span>
+    <span class="ticker__item">反作弊 <b>GrimAC</b> 宽松配置</span>
+    <span class="ticker__item">硬件 <b>线程撕裂者 9995WX</b></span>
+    <span class="ticker__item">内存 <b>1TB DDR5 6000MHz</b></span>
+    <span class="ticker__item">主世界存档 <b>14TB</b></span>
+    <span class="ticker__item">世界纪录 <b>峰值在线 800+</b></span>
+    <!-- 复制一份用于无缝滚动 -->
+    <span class="ticker__item"><b>3c3u.org</b> 无政府 · 无规则</span>
+    <span class="ticker__item">首次开服 <b>2021-11-07</b></span>
+    <span class="ticker__item">现存档起始 <b>2024-03-31</b></span>
+    <span class="ticker__item">服务端 <b>Folia</b> 多核优化</span>
+    <span class="ticker__item">反作弊 <b>GrimAC</b> 宽松配置</span>
+    <span class="ticker__item">硬件 <b>线程撕裂者 9995WX</b></span>
+    <span class="ticker__item">内存 <b>1TB DDR5 6000MHz</b></span>
+    <span class="ticker__item">主世界存档 <b>14TB</b></span>
+    <span class="ticker__item">世界纪录 <b>峰值在线 800+</b></span>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">About the server</div>
+        <h2>一片没有规则的<span class="thin">土地</span></h2>
+      </div>
+      <p class="sec-desc">从 2021 年的一台小机器，到近十万人踏足、存档塞满 14TB 硬盘的混沌之地。</p>
+    </div>
+
+    <div class="about__grid">
+      <div class="about__text reveal">
+        <p>
+          3C3U 最早于 <strong>2021 年 11 月 7 日</strong> 开服，最初以「2B2T test」的名义试运行，
+          2022 年正式更名并进入稳定运营。它的玩法参照 2B2T 一脉的无政府服务器传统：
+          <strong>不设领地、不设保护、不干预玩家行为</strong>。管理员只维护服务器本身能跑起来，
+          剩下的世界里发生什么——掠夺、欺骗、结盟、屠杀——一概不管。
+        </p>
+        <p>
+          2023 年 7 月 31 日，硬盘 IO 故障导致存档不可逆丢失，服务器宣告无限期停服。
+          约八个月的沉默之后，开发团队带着全新的物理机与 <span class="hl">Folia 多核服务端</span> 回来：
+          <strong>2024 年 3 月 31 日</strong>，新 3C3U 开服，也就是现在大家脚下这片土地。
+        </p>
+        <p>
+          今天它是中国大陆规模最大的无规则服务器之一：官方 QQ 群玩家基数超过 6800，
+          全站玩家接近十万，工作日日均在线约 500 人、周末可达 680 人，历史峰值突破 800 人。
+          主世界存档累计 14TB，里面塞满了玩家建过的城市、炸过的废墟，以及没人认领的秘密基地。
+        </p>
+        <p class="callout">
+          <b>这里没有新手保护。</b>出生点方圆几百格是永久战场，第一天被抢光是常规流程。
+          想活下去，你需要学会跑图、藏箱子、以及不告诉任何人你的坐标。
+        </p>
+      </div>
+
+      <aside class="spec reveal">
+        <div class="spec__title"><span>Server Spec</span><span>2026</span></div>
+        <dl>
+          <div class="spec__row"><dt>服务器地址</dt><dd>3c3u.org</dd></div>
+          <div class="spec__row"><dt>平台</dt><dd>Java Edition</dd></div>
+          <div class="spec__row"><dt>服务端版本</dt><dd>26.1</dd></div>
+          <div class="spec__row"><dt>客户端</dt><dd>任意 Java 版（跨版本）</dd></div>
+          <div class="spec__row"><dt>服务端核心</dt><dd>Folia</dd></div>
+          <div class="spec__row"><dt>CPU</dt><dd>线程撕裂者 9995WX</dd></div>
+          <div class="spec__row"><dt>内存</dt><dd>1TB DDR5 6000MHz</dd></div>
+          <div class="spec__row"><dt>反作弊</dt><dd>GrimAC（宽松）</dd></div>
+          <div class="spec__row"><dt>重启周期</dt><dd>每周一次</dd></div>
+          <div class="spec__row"><dt>主世界存档</dt><dd>14 TB</dd></div>
+          <div class="spec__row"><dt>峰值在线</dt><dd>800+</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="sec sec--tight" id="features" style="background:linear-gradient(180deg,transparent,rgba(255,92,22,.025),transparent)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">Gameplay</div>
+        <h2>规则只有一条：<span class="thin">没有规则</span></h2>
+      </div>
+      <p class="sec-desc">下面这些不是"特色玩法"，而是这片土地的实际运行方式。</p>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__num">01</div>
+        <div class="card__ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 4.5v9L12 21 4 16.5v-9L12 3z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>
+        </div>
+        <h3>零规则无政府</h3>
+        <p>没有领地插件，没有封箱保护，没有"破坏他人建筑"的处罚条款。管理员只负责服务器能开机，不负责你睡得安稳。</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__num">02</div>
+        <div class="card__ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 20h18M6 20V9l6-5 6 5v11"/><path d="M10 20v-5h4v5"/></svg>
+        </div>
+        <h3>一切都会消失</h3>
+        <p>百万格之外的基地也会被找到。世界边界之外没有安全区，唯一的保险是"没被别人知道"。</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__num">03</div>
+        <div class="card__ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 17V7l8-3 8 3v10l-8 3-8-3z"/><path d="M9 9.5h6M9 13h6"/></svg>
+        </div>
+        <h3>真·玩家经济</h3>
+        <p>没有官方商店，物价由玩家说了算。从「等价交换」的以物易物平台，到各家补给站与黑市，全部自发形成。</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__num">04</div>
+        <div class="card__ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>
+        </div>
+        <h3>Folia · 千人在线不卡</h3>
+        <p>2026 年 4 月升级到线程撕裂者 9995WX + 1TB DDR5，在线承载从 225 人提升到 550 人，重启从每日改为每周。</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__num">05</div>
+        <div class="card__ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+        </div>
+        <h3>无限延伸的地图</h3>
+        <p>主世界、下界、末地三线并进。地狱高速从中转站一路铺向 20 万格之外，路的尽头是别人藏了三年的家。</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__num">06</div>
+        <div class="card__ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        </div>
+        <h3>排队也要来</h3>
+        <p>高峰期登录服曾出现 100 人长队。2024 年 9 月起开放优先队列：180 元 / 3 个月，400 元 / 1 年。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ERAS ===== -->
+<section class="sec" id="eras">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">Two eras</div>
+        <h2>两个纪元，<span class="thin">一次死亡</span></h2>
+      </div>
+      <p class="sec-desc">3C3U 的历史被一次硬盘故障劈成两半。前一半的存档已经不存在了。</p>
+    </div>
+
+    <div class="eras">
+      <article class="era reveal">
+        <div class="era__tag">Era I · 已终结</div>
+        <h3>旧 3C3U 时期</h3>
+        <div class="era__date">2021-11-07 → 2023-07-31</div>
+        <p>
+          从「2B2T test」起步，正式更名 3C3U。CAF 推进地狱高速至 20 万格，
+          QYER 主导 CPVP 格局，出生点的耶稣像一度是全服地标。
+          Dupe 漏洞反复爆发让经济崩盘，最终硬盘 IO 故障带走了整个存档。
+        </p>
+        <div class="era__meta">
+          <div>持续<b>约 21 个月</b></div>
+          <div>结局<b>存档丢失</b></div>
+          <div>开服在线<b>≈ 50 人</b></div>
+        </div>
+      </article>
+
+      <article class="era era--new reveal">
+        <div class="era__tag">Era II · 进行中</div>
+        <h3>新 3C3U 时期</h3>
+        <div class="era__date">2024-03-31 → 至今</div>
+        <p>
+          停服八个月后重建。物理机托管 IDC，Folia 多核服务端 + GrimAC 宽松反作弊，
+          2024 年暑期因宣传爆发式增长，2026 年硬件大升级后承载翻倍。
+          百余个组织在这片土地上兴起，又在这片土地上消失。
+        </p>
+        <div class="era__meta">
+          <div>持续<b>进行中</b></div>
+          <div>玩家基数<b>6800+</b></div>
+          <div>峰值在线<b>800+</b></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIMELINE PREVIEW ===== -->
+<section class="sec sec--tight" id="timeline">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">Chronicle</div>
+        <h2>大事记<span class="thin">节选</span></h2>
+      </div>
+      <a class="btn btn--ghost" href="history.html">查看完整时间线 →</a>
+    </div>
+
+    <div class="tl">
+      <div class="tl__item reveal">
+        <div class="tl__date">2021-11-07</div>
+        <div class="tl__title">3C3U 首次开服 <span class="badge badge--sys">开服</span></div>
+        <p class="tl__desc">以「2B2T test」名义试运行，早期同时在线约 50 人。</p>
+      </div>
+      <div class="tl__item reveal">
+        <div class="tl__date">2023-07-31</div>
+        <div class="tl__title">硬盘 IO 故障，旧存档不可逆丢失 <span class="badge badge--sys">停服</span></div>
+        <p class="tl__desc">服务器宣告无限期停服，第一纪元终结，此后沉默约八个月。</p>
+      </div>
+      <div class="tl__item reveal">
+        <div class="tl__date">2024-03-31</div>
+        <div class="tl__title">新 3C3U 正式开服 <span class="badge badge--sys">纪元</span></div>
+        <p class="tl__desc">CAF 等老组织第一批回归重建，第二纪元开启。</p>
+      </div>
+      <div class="tl__item reveal">
+        <div class="tl__date">2026-02-19</div>
+        <div class="tl__title">史上最大规模 DDoS 攻击 <span class="badge badge--sys">攻击</span></div>
+        <p class="tl__desc">攻击持续数月，Ping 与丢包严重恶化；此后 3 至 5 月仍有持续性小规模攻击。</p>
+      </div>
+      <div class="tl__item reveal">
+        <div class="tl__date">2026-04-03</div>
+        <div class="tl__title">硬件大升级：9995WX + 1TB DDR5 <span class="badge badge--sys">运营</span></div>
+        <p class="tl__desc">在线承载由 225 人提升至 550 人，重启周期改为每周，猪人塔效率问题解决。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ORGS ===== -->
+<section class="sec sec--tight" id="orgs">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">Factions</div>
+        <h2>这片土地上的<span class="thin">势力</span></h2>
+      </div>
+      <a class="btn btn--ghost" href="factions.html">组织与遗迹档案 →</a>
+    </div>
+
+    <div class="orgs reveal">
+      <div class="org"><div class="org__name">GoEN</div><div class="org__meta">2025-03-21 · <em>综合顶尖</em></div></div>
+      <div class="org"><div class="org__name">ZECE（凤凰 / ZENX）</div><div class="org__meta">2025-07-10 · <em>大型综合</em></div></div>
+      <div class="org"><div class="org__name">等价交换</div><div class="org__meta">2025-10-10 · <em>贸易平台</em></div></div>
+      <div class="org"><div class="org__name">无限失望</div><div class="org__meta">2024-08 · <em>基建</em></div></div>
+      <div class="org"><div class="org__name">90K 帝国</div><div class="org__meta">2025-12-12 · <em>PvP / 掠夺</em></div></div>
+      <div class="org"><div class="org__name">互助会</div><div class="org__meta">2026-03-01 · <em>互助</em></div></div>
+      <div class="org"><div class="org__name">维多利亚家政集团</div><div class="org__meta">2024-05-01 · <em>元老级</em></div></div>
+      <div class="org"><div class="org__name">羊排</div><div class="org__meta">— · <em>已并入 ZECE</em></div></div>
+    </div>
+
+    <p class="sec-desc reveal" style="margin-top:24px;max-width:70ch">
+      非官方 Wiki 目前收录了 <b style="color:var(--text)">123 个组织</b>、<b style="color:var(--text)">74 处建筑与遗迹</b>、
+      <b style="color:var(--text)">33 个未知基地</b> 与 <b style="color:var(--text)">162 张地图画</b>。上面只是最小的切片。
+    </p>
+  </div>
+</section>
+
+<!-- ===== JOIN ===== -->
+<section class="sec" id="join">
+  <div class="wrap">
+    <div class="join reveal">
+      <div class="join__grid">
+        <div>
+          <div class="eyebrow">Get in</div>
+          <h2 style="margin-bottom:14px">准备好<span class="thin">被抢</span>了吗</h2>
+          <p class="sec-desc" style="margin-bottom:6px">
+            服务器为 Java 版，<b style="color:var(--text)">支持正版与离线登录</b>。第一次进服建议先读完下面三步。
+          </p>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step__n">01</div>
+              <div>
+                <h4>用任意 Java 版客户端</h4>
+                <p>服务器装了跨版本插件，<b style="color:var(--text)">任意 Java 版本都能进</b>。服务端本体是 <code>26.1</code>，想体验完整新内容就用这个版本。</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__n">02</div>
+              <div>
+                <h4>添加服务器地址</h4>
+                <p>多人游戏 → 添加服务器 → 地址填 <code>3c3u.org</code>，无需端口。</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__n">03</div>
+              <div>
+                <h4>排队、登入、活着离开出生点</h4>
+                <p>高峰期需要排队。<b style="color:var(--text)">支持正版与离线登录</b>。出生点附近是战场，<b style="color:var(--text)">不要在此停留</b>，立刻沿任意方向跑出人群。</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
+            <a class="btn btn--primary" href="join.html">完整入服指南</a>
+            <a class="btn btn--ghost" href="https://wiki.3c3u.info/wiki/%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">先看 Wiki ↗</a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="qqlist">
+            <div class="qqlist__head"><span>Official QQ Groups</span><span>07</span></div>
+            <div class="qq"><span>1 群</span><b>304707089</b></div>
+            <div class="qq"><span>2 群</span><b>893618228</b></div>
+            <div class="qq is-dead"><span>3 群（已封禁）</span><b>959475141</b></div>
+            <div class="qq"><span>3 群 · 转生版</span><b>922656287</b></div>
+            <div class="qq"><span>4 群</span><b>993973003</b></div>
+            <div class="qq"><span>5 群</span><b>912665104</b></div>
+            <div class="qq"><span>6 群</span><b>523983557</b></div>
+            <div class="qq"><span>7 群</span><b>1109572598</b></div>
+          </div>
+          <p style="font-size:12px;color:var(--dim);margin:14px 0 0;line-height:1.8">
+            官方群信息来自非官方 Wiki 记录。另有玩家运营的非官方 QQ 频道：
+            <a href="https://pd.qq.com/g/Minecraft3c3u" target="_blank" rel="noopener" style="color:var(--lava)">3C3U | 禁止广告 ↗</a>
+          </p>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <a class="brand" href="index.html">
+          <span class="brand__mark">3C</span>
+          <span class="brand-wrap">
+            <span>3C3U</span>
+            <span class="brand__sub">ANARCHY SERVER</span>
+          </span>
+        </a>
+        <p class="foot__note">
+          <b style="color:var(--ash)">非官方声明：</b>本站由玩家社群自发建立与维护，与 3C3U 服务器运营团队、开发团队
+          及任何官方渠道均无隶属关系。所有资料整理自非官方 Wiki（wiki.3c3u.info）与公开社群记录，
+          可能存在滞后或偏差，最终以服务器实际情况为准。
+        </p>
+      </div>
+      <div>
+        <h5>站内</h5>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="history.html">历史与时间线</a></li>
+          <li><a href="factions.html">组织与遗迹</a></li>
+          <li><a href="join.html">加入服务器</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>外部</h5>
+        <ul>
+          <li><a href="https://wiki.3c3u.info/wiki/%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">3C3U 非官方 Wiki ↗</a></li>
+          <li><a href="https://pd.qq.com/g/Minecraft3c3u" target="_blank" rel="noopener">非官方 QQ 频道 ↗</a></li>
+          <li><a href="join.html#faq">常见问题</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© <span data-year>2026</span> 3C3U UNOFFICIAL · 玩家自建站点</span>
+      <span>MINECRAFT 是 MOJANG / MICROSOFT 的商标，本站与其无关联</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
