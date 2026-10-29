@@ -175,6 +175,36 @@
     requestAnimationFrame(draw);
   }
 
+  /* ---------- 组织墙：悬停描述 ---------- */
+  var chips = document.querySelectorAll('.chip[data-desc]');
+  if (chips.length) {
+    var tip = document.createElement('div');
+    tip.className = 'orgtip';
+    document.body.appendChild(tip);
+
+    function showTip(el) {
+      tip.textContent = el.getAttribute('data-desc');
+      tip.classList.add('is-on');
+      var r = el.getBoundingClientRect();
+      var w = tip.offsetWidth;
+      var h = tip.offsetHeight;
+      var left = r.left + r.width / 2 - w / 2;
+      left = Math.max(12, Math.min(left, window.innerWidth - w - 12));
+      var top = r.top - h - 10;
+      if (top < 8) top = r.bottom + 10;
+      tip.style.left = left + 'px';
+      tip.style.top = top + 'px';
+      tip.style.setProperty('--arrow-x', (r.left + r.width / 2 - left) + 'px');
+    }
+    function hideTip() { tip.classList.remove('is-on'); }
+
+    chips.forEach(function (c) {
+      c.addEventListener('mouseenter', function () { showTip(c); });
+      c.addEventListener('mouseleave', hideTip);
+    });
+    window.addEventListener('scroll', hideTip, { passive: true });
+  }
+
   /* ---------- 页脚年份 ---------- */
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = new Date().getFullYear();
